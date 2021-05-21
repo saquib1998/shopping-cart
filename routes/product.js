@@ -24,7 +24,9 @@ router.get("/products/new", isLoggedIn, (req, res) => {
 // Create New Product
 router.post("/products", isLoggedIn, async (req, res) => {
     try {
-        await Product.create(req.body.product);
+        const product = new Product(req.body.product);
+        product.author = req.user._id;
+        product.save();
         req.flash("success", "Product Created Successfully");
         res.redirect("/products");
     } catch (e) {
