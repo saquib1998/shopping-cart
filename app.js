@@ -101,6 +101,7 @@ app.use(cartRoutes);
 app.use(paymentRoutes);
 app.use(userRoutes);
 
-app.listen(process.env.PORT || 3000, () => {
-    console.log("Server Started AT PORT 3000");
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+    console.log(`Server Started AT PORT ${port}`);
 });
