@@ -1,4 +1,0 @@
-
-3.Upload Image using multer to cloudinary.
-4.Google,Facebook Login
-5.Add Icon to the tab

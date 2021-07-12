@@ -16,6 +16,7 @@ const User = require("./models/user");
 
 const MongoDBStore = require("connect-mongo");
 
+
 // Routes
 const productRoutes = require("./routes/product");
 const authRoutes = require("./routes/auth");
